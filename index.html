@@ -21,10 +21,17 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <!-- 커스텀 CSS 추가 (필요 시) -->
+    <!-- 커스텀 CSS 추가 -->
     <style>
         .page {
             margin-bottom: 6rem; /* 모든 페이지 섹션에 하단 마진 적용 */
+        }
+        .section-padding {
+            padding-top: 100px; /* 필요한 값으로 조정 */
+        }
+        #sidebar-nav a.active {
+            color: #F96D00;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -56,7 +63,7 @@
     </nav>
 
     <!-- Hero 섹션 -->
-    <section class="hero-wrap js-fullheight" id="home-section">
+    <section class="hero-wrap js-fullheight section-padding" id="home-section">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
@@ -80,7 +87,7 @@
     </section>
 
     <!-- About 섹션 -->
-    <section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
+    <section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb section-padding" id="about-section">
         <div class="container">
             <div class="row d-flex no-gutters">
                 <div class="col-md-6 col-lg-6 d-flex">
@@ -123,7 +130,7 @@
     </section>
 
     <!-- Counter 섹션 -->
-    <section class="ftco-section ftco-no-pb ftco-counter img" id="section-counter">
+    <section class="ftco-section ftco-no-pb ftco-counter img section-padding" id="section-counter">
         <div class="container-fluid px-md-5">
             <div class="row d-md-flex align-items-center">
                 <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
@@ -163,20 +170,20 @@
     </section>
 
     <!-- Resume 섹션 -->
-    <section class="ftco-section ftco-no-pb goto-here" id="resume-section">
+    <section class="ftco-section ftco-no-pb goto-here section-padding" id="resume-section">
         <div class="container">
             <div class="row">
                 <!-- 네비게이션 -->
                 <div class="col-md-3">
-                    <nav id="navi">
+                    <nav id="sidebar-nav">
                         <ul>
-                            <li><a href="#education-section">Education</a></li>
-                            <li><a href="#experience-section">Experience</a></li>
-                            <li><a href="#skills-section">Skills</a></li>
-                            <li><a href="#projects-section">Projects</a></li>
-                            <li><a href="#certificates-section">Certificates</a></li>
-                            <li><a href="#competition-section">Competition</a></li>
-                            <li><a href="#conference-section">Conference</a></li>
+                            <li><a href="#education-section" class="sidebar-link">Education</a></li>
+                            <li><a href="#experience-section" class="sidebar-link">Experience</a></li>
+                            <li><a href="#skills-section" class="sidebar-link">Skills</a></li>
+                            <li><a href="#projects-section" class="sidebar-link">Projects</a></li>
+                            <li><a href="#certificates-section" class="sidebar-link">Certificates</a></li>
+                            <li><a href="#competition-section" class="sidebar-link">Competition</a></li>
+                            <li><a href="#conference-section" class="sidebar-link">Conference</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -184,7 +191,7 @@
                 <!-- 콘텐츠 -->
                 <div class="col-md-9">
                     <!-- Page 1: Education -->
-                    <div id="education-section" class="page one">
+                    <div id="education-section" class="page one section-padding">
                         <h2 class="heading">Education</h2>
                         <div class="resume-wrap d-flex ftco-animate">
                             <div class="icon d-flex align-items-center justify-content-center">
@@ -200,7 +207,7 @@
                     </div>
 
                     <!-- Page 2: Experience -->
-                    <div id="experience-section" class="page two">
+                    <div id="experience-section" class="page two section-padding">
                         <h2 class="heading">Work Experience</h2>
                         <div class="resume-wrap d-flex ftco-animate">
                             <div class="icon d-flex align-items-center justify-content-center">
@@ -216,7 +223,7 @@
                     </div>
                     
                     <!-- Page 3: Skills -->
-                    <div id="skills-section" class="page three">
+                    <div id="skills-section" class="page three section-padding">
                         <h2 class="heading">Skills</h2>
                         <div class="row progress-circle mb-5">
                             <div class="col-lg-4 mb-4">
@@ -392,7 +399,7 @@
                     </div>
 
                     <!-- Page 4: Projects -->
-                    <div id="projects-section" class="page four">
+                    <div id="projects-section" class="page four section-padding">
                         <h2 class="heading">Projects</h2>
                         <div class="resume-wrap d-flex ftco-animate">
                             <div class="icon d-flex align-items-center justify-content-center">
@@ -454,7 +461,7 @@
                     </div>
 
                     <!-- Page 5: Certificates -->
-                    <div id="certificates-section" class="page five">
+                    <div id="certificates-section" class="page five section-padding">
                         <h2 class="heading">Certificates</h2>
                         <div class="resume-wrap d-flex ftco-animate">
                             <div class="icon d-flex align-items-center justify-content-center">
@@ -611,7 +618,7 @@
                     </div>
                     
                     <!-- Page 6: Competition -->
-                    <div id="competition-section" class="page six">
+                    <div id="competition-section" class="page six section-padding">
                         <h2 class="heading">Competition</h2>
                         <div class="resume-wrap d-flex ftco-animate">
                             <div class="icon d-flex align-items-center justify-content-center">
@@ -852,7 +859,7 @@
         </svg></div>
 
 
-    <!-- JavaScript 파일들 -->
+   <!-- JavaScript 파일들 -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -868,6 +875,33 @@
 
     <script src="js/main.js"></script>
 
+    <!-- 커스텀 JavaScript: 사이드바 활성화 관리 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+            const sidebarLinks = document.querySelectorAll("#sidebar-nav a");
+
+            window.addEventListener("scroll", () => {
+                let current = "";
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 150; // 스크롤 오프셋 조정
+                    if (pageYOffset >= sectionTop) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                sidebarLinks.forEach(link => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === `#${current}`) {
+                        link.classList.add("active");
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 
+</html>
 </html>
